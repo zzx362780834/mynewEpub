@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Parent Page</title>
+        <script language="javascript" type="text/javascript">
+            function parenttest() {
+                alert("这是父页面的方法！");
+            }
+            function btnClick() {
+                document.getElementById("childframe").contentWindow.childtest();
+            }
+    </script>
+</head>
+<body>
+   <div style="margin:auto;">
+       <h1>This is the Parent Page.</h1>
+       <input type="button" value="调用子页面的方法"  onclick="btnClick()"/> 
+    </div>
+    <div style="margin:auto;">
+       <iframe style="width:300px; height:300px;" id="childframe" src="http://127.0.0.1:8088/"></iframe>
+    </div>
+</body>
+</html>

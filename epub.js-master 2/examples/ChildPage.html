@@ -1,0 +1,21 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Child Page</title>
+    <script language="javascript" type="text/javascript">
+      function childtest() {
+          alert("这是子页面的方法！");
+      }
+      function btnClick() {
+          window.parent.parenttest();
+      }
+    </script>
+</head>
+<body>
+   <div style="margin:auto;">
+       <h1>This is the Child Page.</h1>
+       <input type="button" value="调用父页面的方法" onclick="btnClick()"/> 
+    </div>
+</body>
+</html>
